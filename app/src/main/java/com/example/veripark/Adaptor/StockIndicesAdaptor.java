@@ -23,16 +23,19 @@ import com.example.veripark.R;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class StockIndicesAdaptor extends RecyclerView.Adapter<StockIndicesAdaptor.MyViewHolder> implements Filterable {
     Context context;
     List<Stocks> stocks;
-    List<Stocks> stocksAll;
+    List<Stocks> stocksAll = new ArrayList<>();
     public StockIndicesAdaptor(Context context, List<Stocks> stocks) {
         this.context = context;
         this.stocks = stocks;
-        this.stocksAll=stocks;
+        for (Stocks s : stocks) {
+            stocksAll.add(new Stocks(s.getSymbol(), s.getVolume(), s.getPrice(), s.getOffer(), s.getDifference(), s.getBid(), s.isUp(), s.isDown(),s.getId()));
+        }
     }
 
     public StockIndicesAdaptor() {}
@@ -118,7 +121,7 @@ public class StockIndicesAdaptor extends RecyclerView.Adapter<StockIndicesAdapto
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
             stocks.clear();
-            stocksAll.addAll((List<Stocks>) results.values);
+            stocks.addAll((List<Stocks>) results.values);
             notifyDataSetChanged();
         }
     };
