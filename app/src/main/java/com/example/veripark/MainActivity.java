@@ -39,15 +39,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         progressBar=findViewById(R.id.progressBar);
 
-
-        //this is my class
-        try {
-            Log.d("MAIN",CryptoHandler.getInstance().encrypt("all","sdc7G6pcd2F3sO5agVOsEFn34WoLNEFQNbzBoORiiVI=","7UayjJWGUHakervuyL/10g=="));
-            Log.d("MAIN CRIPTO",CryptoHandler.getInstance().decrypt("o+3IzlzQUyW97ynrKfMimg==","sdc7G6pcd2F3sO5agVOsEFn34WoLNEFQNbzBoORiiVI=","7UayjJWGUHakervuyL/10g=="));
-        } catch (NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException | BadPaddingException | InvalidKeyException | UnsupportedEncodingException | InvalidAlgorithmParameterException e) {
-            e.printStackTrace();
-        }
-
     }
 
     public void getLoginData(View view) {

@@ -29,6 +29,7 @@ import com.example.veripark.Model.List.ListResponse;
 import com.example.veripark.Model.List.Stocks;
 import com.example.veripark.R;
 import com.example.veripark.Require.Const;
+import com.example.veripark.Require.Method;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidAlgorithmParameterException;
@@ -71,7 +72,7 @@ public class Decreasing extends Fragment {
         progressBar.setVisibility(View.VISIBLE);
         List<Stocks> stocksList=new ArrayList<Stocks>();
         HolderAPI holderAPI = ApiClient.getClient().create(HolderAPI.class);
-        Call<ListResponse> call = holderAPI.stocksList(Const.getAuthorization(),new ListPost(CryptoHandler.getInstance().encrypt("decreasing",Const.getAesKey(),Const.getAesIV())));
+        Call<ListResponse> call = holderAPI.stocksList(Const.getAuthorization(),new ListPost(CryptoHandler.getInstance().encrypt(Method.getDECREASING(),Const.getAesKey(),Const.getAesIV())));
         call.enqueue(new Callback<ListResponse>() {
             @Override
             public void onResponse(Call<ListResponse> call, Response<ListResponse> response) {
