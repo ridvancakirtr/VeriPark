@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/stock_indices"
+            android:icon="@drawable/ic_circle_point"
+            android:title="Hisse ve Endenksler" />
+        <item
+            android:id="@+id/rising"
+            android:icon="@drawable/ic_circle_point"
+            android:title="Yükselenler" />
+        <item
+            android:id="@+id/decreasing"
+            android:icon="@drawable/ic_circle_point"
+            android:title="Azalanlar" />
+    </group>
+
+    <item android:title="Hacim">
+        <menu>
+            <item
+                android:id="@+id/valume30"
+                android:icon="@drawable/ic_circle_point"
+                android:title="Hacme Göre - 30" />
+            <item
+                android:id="@+id/valume50"
+                android:icon="@drawable/ic_circle_point"
+                android:title="Hacme Göre - 50" />
+            <item
+                android:id="@+id/valume100"
+                android:icon="@drawable/ic_circle_point"
+                android:title="Hacme Göre - 100" />
+        </menu>
+    </item>
+
+</menu>

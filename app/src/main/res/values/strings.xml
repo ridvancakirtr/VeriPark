@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">IMKB Hisse Senetleri Endeksler</string>
+    <string name="entire_btn_text">IMKB Hisse Senetleri ve Endeksler</string>
+    <string name="hisse_ve_endeksler">Hisse ve Endeksler</string>
+    <string name="yukselenler">Yükselenler</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="veripark">VERİPARK</string>
+    <string name="imkb_hisse_senetleri_endeksler">IMKB Hisse Senetleri/Endeksler</string>
+    <string name="sembol">Sembol</string>
+    <string name="fiyat">Fiyat</string>
+    <string name="fark">Fark</string>
+    <string name="hacim">Hacim</string>
+    <string name="alis">Alış</string>
+    <string name="satis">Satış</string>
+    <string name="degisim">Değişim</string>
+    <string name="arama">Arama</string>
+</resources>
